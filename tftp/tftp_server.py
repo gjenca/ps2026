@@ -5,11 +5,11 @@ FNM_SEND='Capybara_Hattiesburg_Zoo_(70909b-42)_2560x1600.jpg'
 
 
 
-s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+s=socket.socket(socket.AF_INET6,socket.SOCK_DGRAM)
 s.bind(("",9999))
 
 data,addr=s.recvfrom(1024)
-print(data)
+print(data,addr)
 opcode=struct.unpack('>H',data[:2])
 fnm,encoding,null=data[2:].split(b'\x00')
 print(f'{opcode=} {fnm=} {encoding=} {null=}')
@@ -24,7 +24,7 @@ with open(FNM_SEND,'rb') as f:
         data,addr=s.recvfrom(1024)
         opcode=struct.unpack('>H',data[:2])
         block_num=struct.unpack('>H',data[2:4])
-        print(f'{opcode=} {block_num=}')
+        #print(f'{opcode=} {block_num=}')
         if len(send_back)<512:
             break
 
