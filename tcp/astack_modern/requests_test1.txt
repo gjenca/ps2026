@@ -1,0 +1,15 @@
+PUSH
+10
+
+PUSH
+20
+
+PUSH
+30
+
+MULTIPLY
+
+ADD
+
+PEEK
+

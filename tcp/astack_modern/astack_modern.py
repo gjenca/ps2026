@@ -11,6 +11,12 @@ STATUS_REQUEST_CONTENT_EMPTY=(201,'Content empty')
 STATUS_NOT_A_NUMBER=(202,'Not a number')
 STATUS_STACK_TOO_SHORT=(203,'Stack too short')
 STATUS_REQUEST_CONTENT_NONEMPTY=(204,'Content non empty')
+STATUS_REQUEST_STACK_EMPTY=(205,'Stack empty')
+STATUS_BAD_REQUEST=(301,'Bad request')
+
+class ConnectionClosed(Exception):
+
+    pass
 
 class Request:
 
@@ -20,7 +26,8 @@ class Request:
         while True:
             line=f.readline()
             line=line.decode('utf-8')
-            # uzavretie spojenia osetrenie doplnit
+            if not line:
+                raise ConnectionClosed
             if line=='\n':
                 break
             line=line.rstrip()
@@ -71,11 +78,39 @@ def method_ADD(req,stack):
     stack.append(n1+n2)
     return Response(STATUS_OK,[])
 
+def method_MULTIPLY(req,stack):
+
+    if len(stack)<2:
+        return Response(STATUS_STACK_TOO_SHORT,[])
+    if req.content:
+        return Response(STATUS_REQUEST_CONTENT_NONEMPTY,[])
+    n1=stack.pop()
+    n2=stack.pop()
+    stack.append(n1*n2)
+    return Response(STATUS_OK,[])
+
+def method_PEEK(req,stack):
+
+    if not stack:
+        return Response(STATUS_REQUEST_STACK_EMPTY,[])
+    if req.content:
+        return Response(STATUS_REQUEST_CONTENT_NONEMPTY,[])
+    return Response(STATUS_OK,[str(stack[-1])])
+
+def method_ZAP(req,stack):
+    
+    if req.content:
+        return Response(STATUS_REQUEST_CONTENT_NONEMPTY,[])
+    stack[:]=[] # del stack[:]
+    return Response(STATUS_OK,[])
 
 # Zobrazenie syntax -> spravanie
 METHODS={
         'PUSH':method_PUSH,
         'ADD':method_ADD,
+        'MULTIPLY':method_MULTIPLY,
+        'PEEK':method_PEEK,
+        'ZAP':method_ZAP,
         }
 
 def handle_client(cs,addr):
@@ -83,7 +118,10 @@ def handle_client(cs,addr):
         f=cs.makefile('rwb')
         stack=[]
         while True:
-            req=Request(f)
+            try:
+                req=Request(f)
+            except ConnectionClosed:
+                break
             logging.debug(f'Request method:{req.method} Content:{req.content}')
             if req.method in METHODS:
                 response=METHODS[req.method](req,stack)
@@ -92,7 +130,9 @@ def handle_client(cs,addr):
             response.send(f)
             if response.status==STATUS_BAD_REQUEST:
                 break
-        
+        f.close()
+        cs.close()
+
 
 ss=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 ss.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
