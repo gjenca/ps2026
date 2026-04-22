@@ -1,0 +1,514 @@
+HTTP/1.1 200 OK
+Date: Wed, 08 Apr 2026 11:04:38 GMT
+Server: gunicorn/19.10.0
+Content-Type: text/html; charset=utf-8
+Vary: Cookie,User-Agent,Accept-Language,Accept-Encoding
+Transfer-Encoding: chunked
+
+7d8
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-708621-2']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="robots" content="index,follow">
+
+<title>FrontPage - KMaDG Wiki</title>
+<script type="text/javascript" src="/moin_static1911/common/js/common.js"></script>
+
+<script type="text/javascript">
+<!--
+var search_hint = "Search";
+//-->
+</script>
+
+
+<link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static1911/kmat/css/common.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="screen" href="/moin_static1911/kmat/css/screen.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="print" href="/moin_static1911/kmat/css/print.css">
+<link rel="stylesheet" type="text/css" charset="utf-8" media="projection" href="/moin_static1911/kmat/css/projection.css">
+
+<!-- css only for MS IE6/IE7 browsers -->
+<!--[if lt IE 8]>
+   <link rel="stylesheet" type="text/css" charset="utf-8" media="all" href="/moin_static1911/kmat/css/msie.css">
+<![endif]-->
+
+
+<link rel="alternate" title="KMaDG Wiki Recent Changes" href="/wiki/FrontPage?action=rss_rc&amp;unique=1&amp;ddiffs=1" type="application/rss+xml">
+
+
+<link rel="Start" href="/wiki/FrontPage">
+<link rel="Alternate" title="Wiki Markup" href="/wiki/FrontPage?action=raw">
+<link rel="Alternate" media="print" title="Print View" href="/wiki/FrontPage?action=print">
+
+76
+<link rel="Appendix" title="3arrows.gif" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=3arrows.gif">
+
+76
+<link rel="Appendix" title="kurzy22.pdf" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=kurzy22.pdf">
+
+7c
+<link rel="Appendix" title="prihlaseni.pdf" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=prihlaseni.pdf">
+
+7c
+<link rel="Appendix" title="rightarrow.gif" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=rightarrow.gif">
+
+7e
+<link rel="Appendix" title="rightarrow2.gif" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=rightarrow2.gif">
+
+78
+<link rel="Appendix" title="www_arch.pdf" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=www_arch.pdf">
+
+78
+<link rel="Appendix" title="www_stav.pdf" href="/wiki/FrontPage?action=AttachFile&amp;do=view&amp;target=www_stav.pdf">
+
+ba
+<link rel="Search" href="/wiki/FindPage">
+<link rel="Index" href="/wiki/TitleIndex">
+<link rel="Glossary" href="/wiki/WordIndex">
+<link rel="Help" href="/wiki/HelpOnFormatting">
+</head>
+
+723
+
+<body  lang="en" dir="ltr">
+
+<div id="header">
+<div id="logo"><a href="/wiki/FrontPage"><img src="/moin_static198/kmat/img/kmadg_logo.gif" alt="KMaDG Wiki"></a></div>
+
+<form id="searchform" method="get" action="/wiki/FrontPage">
+<div>
+<input type="hidden" name="action" value="fullsearch">
+<input type="hidden" name="context" value="180">
+<label for="searchinput">Search:</label>
+<input id="searchinput" type="text" name="value" value="" size="20"
+    onfocus="searchFocus(this)" onblur="searchBlur(this)"
+    onkeyup="searchChange(this)" onchange="searchChange(this)" alt="Search">
+<input id="titlesearch" name="titlesearch" type="submit"
+    value="Titles" alt="Search Titles">
+<input id="fullsearch" name="fullsearch" type="submit"
+    value="Text" alt="Search Full Text">
+</div>
+</form>
+<script type="text/javascript">
+<!--// Initialize search form
+var f = document.getElementById('searchform');
+f.getElementsByTagName('label')[0].style.display = 'none';
+var e = document.getElementById('searchinput');
+searchChange(e);
+searchBlur(e);
+//-->
+</script>
+
+<ul id="username"><li><a href="https://www.math.sk/wiki/FrontPage?action=login">Login</a></li>
+<li>127.0.0.1</li>
+</ul>
+
+        <ul id="navibar">
+        <li class="wikilink"><a href="/wiki/Vyuka">Pedagogika</a></li>
+<li class="wikilink"><a href="/wiki/Vyskum">Veda a výskum</a></li>
+<li class="wikilink"><a href="/wiki/ClenoviaKatedry">Pracovníci</a></li>
+<li class="wikilink"><a href="/wiki/FindPage">Vyhľadávanie</a></li>
+        </ul>
+        
+<div id="languagebar"><img src="/moin_static1911/kmat/img/moin-print.png"><a href=/wiki/FrontPage?action=print>Print</a>
+<img src="/moin_static1911/kmat/img/flag-en.png"><a href="/wiki/FrontPageEn"> English</a>
+</div>
+<div id="pageline"><hr style="display:none;"></div>
+
+
+</div>
+
+
+<div id="page" lang="en" dir="ltr">
+
+4c
+<div dir="ltr" id="content" lang="en"><span class="anchor" id="top"></span>
+
+28
+<span class="anchor" id="line-1"></span>
+28
+<span class="anchor" id="line-2"></span>
+28
+<span class="anchor" id="line-3"></span>
+28
+<span class="anchor" id="line-4"></span>
+28
+<span class="anchor" id="line-5"></span>
+28
+<span class="anchor" id="line-6"></span>
+28
+<span class="anchor" id="line-7"></span>
+28
+<span class="anchor" id="line-8"></span>
+28
+<span class="anchor" id="line-9"></span>
+29
+<span class="anchor" id="line-10"></span>
+29
+<span class="anchor" id="line-11"></span>
+29
+<span class="anchor" id="line-12"></span>
+110
+<div><table><tbody><tr>  <td style="font-size:32px;  font-weight:bold;  border:none;  line-height:40px;"><p class="line862"> Katedra matematiky<br>
+a deskriptívnej geometrie</td>
+</tr>
+<tr>  <td style="font-size:24px;  font-weight:bold;  border:none;  line-height:40px;">
+29
+<span class="anchor" id="line-13"></span>
+b3
+<p class="line862"> <a class="https" href="https://www.svf.stuba.sk/">Stavebná fakulta</a>, <a class="https" href="https://www.stuba.sk">STU</a></td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-14"></span>
+29
+<span class="anchor" id="line-15"></span>
+29
+<span class="anchor" id="line-16"></span>
+13
+<p class="line867">
+29
+<span class="anchor" id="line-17"></span>
+29
+<span class="anchor" id="line-18"></span>
+13
+<p class="line867">
+29
+<span class="anchor" id="line-19"></span>
+29
+<span class="anchor" id="line-20"></span>
+2d
+<p class="line867"><hr /><p class="line874"> 
+29
+<span class="anchor" id="line-21"></span>
+14
+
+<h3 id="O_katedre">
+f
+O katedre</h3>
+
+29
+<span class="anchor" id="line-22"></span>
+29
+<span class="anchor" id="line-23"></span>
+46
+<div><table><tbody><tr>  <td style="border:none;"><p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+45
+ </td>
+  <td style="border:none; font-size:115%;"><p class="line891">
+20
+<a href="/wiki/ClenoviaKatedry">
+11
+Členovia katedry
+4
+</a>
+2b
+</td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-24"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+45
+ </td>
+  <td style="border:none; font-size:115%;"><p class="line891">
+22
+<a href="/wiki/PublikacnaCinnost">
+1e
+Publikačná činnosť katedry
+4
+</a>
+2b
+</td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-25"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+17
+<a href="/wiki/Vyskum">
+24
+Vedecko-výskumná činnosť katedry
+4
+</a>
+2c
+ </td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-26"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+17
+<a href="/wiki/Granty">
+1c
+Grantové výzvy v riešení
+4
+</a>
+23
+ </td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-27"></span>
+29
+<span class="anchor" id="line-28"></span>
+13
+<p class="line867">
+1f
+
+<h3 id="A.2BAWA-t.2BAPo-dium">
+f
+Štúdium</h3>
+
+29
+<span class="anchor" id="line-29"></span>
+29
+<span class="anchor" id="line-30"></span>
+46
+<div><table><tbody><tr>  <td style="border:none;"><p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+ca
+ </td>
+  <td style="border:none; font-size:115%;"><p class="line891"><a class="https" href="https://www.math.sk/mpm">Matematicko-počítačové modelovanie</a></td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-31"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+1b
+<a href="/wiki/PhdStudium">
+e
+PhD. štúdium
+4
+</a>
+52
+ </td>
+</tr>
+<p class="line891"><p class="line891"><tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-34"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+16
+<a href="/wiki/Vyuka">
+6
+Výuka
+4
+</a>
+2c
+ </td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-35"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+1f
+<a href="/wiki/PripravneKurzy">
+16
+Prípravné kurzy 2025
+4
+</a>
+23
+ </td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-36"></span>
+29
+<span class="anchor" id="line-37"></span>
+13
+<p class="line867">
+21
+
+<h3 id="Konferencie_a_projekty">
+1c
+Konferencie a projekty</h3>
+
+29
+<span class="anchor" id="line-38"></span>
+29
+<span class="anchor" id="line-39"></span>
+46
+<div><table><tbody><tr>  <td style="border:none;"><p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+25
+<a href="/wiki/KonferencieASeminare">
+17
+Konferencie a semináre
+4
+</a>
+2c
+ </td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-40"></span>
+14
+<p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+be
+ </td>
+  <td style="border:none; font-size:115%;"><p class="line891"><a class="https" href="https://www.math.sk/gbvp">Modelovanie tiažového poľa Zeme</a></td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-41"></span>
+29
+<span class="anchor" id="line-42"></span>
+13
+<p class="line867">
+28
+
+<h3 id="Ostatn.2BAOk_inform.2BAOE-cie">
+1a
+Ostatné informácie</h3>
+
+29
+<span class="anchor" id="line-43"></span>
+46
+<div><table><tbody><tr>  <td style="border:none;"><p class="line862"> 
+93
+<img alt="rightarrow.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow.gif" title="rightarrow.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+1f
+<a href="/wiki/ZaujimaveLinky">
+11
+Zaujímavé linky
+4
+</a>
+2c
+ </td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-44"></span>
+14
+<p class="line862"> 
+96
+<img alt="rightarrow2.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow2.gif" title="rightarrow2.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+1e
+<a href="/wiki/RecentChanges">
+10
+Najnovšie zmeny
+4
+</a>
+2c
+ </td>
+</tr>
+<tr>  <td style="border:none;">
+29
+<span class="anchor" id="line-45"></span>
+14
+<p class="line862"> 
+96
+<img alt="rightarrow2.gif" class="attachment" src="/wiki/FrontPage?action=AttachFile&amp;do=get&amp;target=rightarrow2.gif" title="rightarrow2.gif" />
+48
+ </td>
+  <td style="border:none;  font-size:115%;"><p class="line862">  
+22
+<a href="/wiki/PreAutorovStranok">
+14
+Pre autorov stránok
+4
+</a>
+23
+ </td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-46"></span>
+29
+<span class="anchor" id="line-47"></span>
+d2
+<div><table style="width:100%;"><tbody><tr style="font-size:12px;  border:dotted;  border-width:1px;  border-color:gray;">  <td style="border:none;"><p class="line862">Tieto stránky sú vytvárané v systéme 
+19
+<a href="/wiki/MoinMoin">
+8
+MoinMoin
+4
+</a>
+d7
+. </td>
+  <td style="border:none;"><p class="line862"> Správca wiki: <a class="mailto" href="mailto:gejza.jenca@stuba.sk">gejza.jenca@stuba.sk</a> </td>
+  <td style="border:none;"></td>
+</tr>
+</tbody></table></div>
+29
+<span class="anchor" id="line-48"></span>
+2e
+<span class="anchor" id="bottom"></span></div>
+126
+<p id="pageinfo" class="info" lang="en" dir="ltr">KMaDGWiki: FrontPage  (last edited 2025-10-09 10:53:14 by <span title="jenca @ 127.0.0.1[127.0.0.1]"><a href="/wiki/jenca" title="jenca @ 127.0.0.1[127.0.0.1]">jenca</a></span>)</p>
+
+<div id="pagebottom"></div>
+</div>
+
+<div id="footer">
+</div>
+
+11
+</body>
+</html>
+
+
+0
+

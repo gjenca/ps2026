@@ -1,0 +1,6 @@
+HTTP/1.1 200 OK
+Content-type: text/plain
+Content-length: 9
+
+kapybara
+
