@@ -13,10 +13,12 @@ DOCUMENT_ROOT='documents'
 
 STATUS_OK=200
 STATUS_NOT_FOUND=404
+STATUS_NOT_MODIFIED=304
 
 STATUS_DESC={
         STATUS_OK:'OK',
         STATUS_NOT_FOUND:'Not found',
+        STATUS_NOT_MODIFIED:'Not modified',
 }
 
 MIME_TYPES={
@@ -25,6 +27,7 @@ MIME_TYPES={
         'jpg':'image/jpeg',
         'png':'image/png',
         }
+
 
 class ConnectionClosed(Exception):
 
@@ -47,8 +50,8 @@ class Request:
         self.method,self.url,self.version=lines[0].split()
         self.headers={}
         for line in lines[1:]:
-            header,value=line.split(' ',1)
-            self.headers[header[:-1]]=value
+            header,value=line.split(':',1)
+            self.headers[header.lower()]=value.strip()
 
 class Response:
 
@@ -58,17 +61,32 @@ class Response:
         self.headers=headers
         self.content=content
 
-    def send(self,f):
+    def send(self,f,chunked=False):
 
         text_send=[]
         text_send.append(f'HTTP/1.1 {self.status} {STATUS_DESC[self.status]}')
+        if chunked:
+            self.headers['Transfer-encoding']='chunked'
+        else:
+            if self.content:
+                self.headers['Content-length']=str(len(self.content))
         for header in self.headers:
             text_send.append(f'{header}: {self.headers[header]}')
         text_send.append('')
         for line in text_send:
             logging.debug(f'sending <{line}>')
             f.write((line+'\r\n').encode('ASCII'))
-        f.write(self.content)
+        if chunked and self.content:
+            i=0
+            while True:
+                chunk=self.content[i:i+1000]
+                f.write('{0:x}\r\n'.format(len(chunk)).encode('ascii'))
+                f.write(chunk)
+                if not chunk:
+                    break
+                i=i+1000
+        else:
+            f.write(self.content)
         f.flush()
 
 class ErrorResponse(Response):
@@ -84,7 +102,7 @@ class ErrorResponse(Response):
         </html>'''.encode('ASCII')
         headers={
                 'Content-type':'text/html',
-                'Content-length':f'{len(content)}',
+                #'Content-length':f'{len(content)}',
         }
         super().__init__(status,headers,content)
 
@@ -109,12 +127,19 @@ def handle_client(cs,addr):
                     with open(filename,'rb') as fd:
                         content=fd.read()
                     last_modified=email.utils.formatdate(os.stat('/etc/passwd').st_mtime)
-                    headers={
-                            'Last-modified:':last_modified,
-                            'Content-type':content_type,
-                            'Content-length':f'{len(content)}'
-                    }
-                    resp=Response(STATUS_OK,headers,content)
+                    if_modified_since=req.headers.get('if-modified-since')
+                    logging.debug(f'Last modified: {repr(last_modified)}')
+                    logging.debug(f'If-modified-since: {repr(if_modified_since)}')
+                    if last_modified!=if_modified_since:
+                        headers={
+                                'Last-modified':last_modified,
+                                'Content-type':content_type,
+                                #'Content-length':f'{len(content)}'
+                        }
+                        resp=Response(STATUS_OK,headers,content)
+                        resp.send(f,chunked=True)
+                    else:
+                        resp=Response(STATUS_NOT_MODIFIED,{},b'')
                 except FileNotFoundError:
                     resp=ErrorResponse(STATUS_NOT_FOUND)
                 resp.send(f)
